@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpeg" href="static/istockphoto-500600490-612x612.jpg">
+  <title>
+    Rebel Skull
+  </title>
+</head>
+
+<body style="background-color:black;color:white;text-align:center;font-family: 'Bangers', cursive;">
+  {% include "nav.html" %}
+  <img src="static/istockphoto-500600490-612x612.jpg" width="150px">
+  <h1 style="font-weight:bold"> Join Rebel Skull Gang</h1>
+  <h2>Welcome to Rebel Skull – Where asphalt meets fire, and every mile is a testament to the fearless. We are the
+    riders of rebellion, the outlaws of the open road. No rules, no limits, just the roar of engines and the freedom of
+    the wild. Join the brotherhood, and let the legacy of freedom burn brighter with every ride.</h2>
+  <br>
+  <h1 style="font-weight:bold">Choose Your Role</h1>
+  {% for i in data %}
+  <table style="font-size:20px" align="center" width="300px">
+    <tr>
+      <td width="30px">{{ i['title'] }}</td>
+      <td width="30px">
+        <a href="mailto:skullcult@gmail.com?subject=I%20want%20to%20become%20{{i.title}}" target="_blank">
+          <button
+            style="background-color:#292929;color:white;border-radius:30px;font-size:15px;font-family: 'Bangers',cursive;">Apply</button>
+        </a>
+      </td>
+    </tr>
+  </table>
+  <hr style="width:20%;height:4px;border-radius:20px;">
+  {% endfor %}
+  <br>
+  <a href="mailto:skullcult@gmail.com?subject=Question&body=My%20question%3A" target="_blank">
+    <button
+      style="background-color:#292929;color:white;border-radius:30px;font-size:20px;font-family: 'Bangers',cursive;">Contact
+      Us
+    </button>
+  </a>
+  {% include "footer.html" %}
+</body>
+
+</html>
