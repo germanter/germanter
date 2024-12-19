@@ -2,7 +2,7 @@ import pymysql
 from dotenv import load_dotenv
 import os
 
-load_dotenv()  ###security
+# load_dotenv()  ###security
 def load_data():
     timeout = 10
     connection = pymysql.connect(
