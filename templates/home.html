@@ -1,18 +1,9 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE-edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/jpeg" href="static/istockphoto-500600490-612x612.jpg">
-  <title>
+{% extends 'base.html' %}
+{% block ftitle %}
     Rebel Skull
-  </title>
-</head>
+{% endblock %}
 
-<body style="background-color:black;color:white;text-align:center;font-family: 'Bangers', cursive;">
-  {% include "nav.html" %}
+{% block fbody %}
   <img src="static/istockphoto-500600490-612x612.jpg" width="150px">
   <h1 style="font-weight:bold"> Join Rebel Skull Gang</h1>
   <h2>Welcome to Rebel Skull – Where asphalt meets fire, and every mile is a testament to the fearless. We are the
@@ -25,7 +16,7 @@
     <tr>
       <td width="30px">{{ i['title'] }}</td>
       <td width="30px">
-        <a href="mailto:skullcult@gmail.com?subject=I%20want%20to%20become%20{{i.title}}" target="_blank">
+        <a href="/job/{{i['id']}}">
           <button
             style="background-color:#292929;color:white;border-radius:30px;font-size:15px;font-family: 'Bangers',cursive;">Apply</button>
         </a>
@@ -41,7 +32,4 @@
       Us
     </button>
   </a>
-  {% include "footer.html" %}
-</body>
-
-</html>
+{% endblock %} 

@@ -11,15 +11,11 @@ def home():
 def api():
     return jsonify(load_data())
 
-@app.route("/api/data/<id>")
+@app.route("/job/<id>")
 def job(id):
     job = load_job(id)
-    if not job == []:
-        return jsonify(job)
-    else:
-        return jsonify('invalid id')
+    return render_template('jobs.html',job=job)
 
-        
 
 if __name__=="__main__":
     app.run(

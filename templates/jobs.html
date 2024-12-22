@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block ftitle %} 
+    {% if not job == [] %}
+        {{ job[0]['title']}}  - Rebel Skull 
+    {% else %}
+        Error 404
+    {% endif %}
+{% endblock %} 
+
+{% block fbody %}
+    {% if not job == [] %}
+        <br>
+        <p style="margin:0px;font-size: 30px; font-weight: bold; color: #ffffff;">
+            {{ job[0]['title'] }}
+        </p><br>
+        <hr style="width:20%;height:4px;border-radius:20px;"><br>
+        
+        <p style="margin:0px;font-size: 30px; font-weight: bold; color: #c2c2c2;">Location</p><br>
+        <p style="font-size: 25px;margin: 0px; color: #ffffff;">{{ job[0]['location'] }}</p><br>
+        <hr style="width:30%;height:4px;border-radius:20px;"><br>
+        
+        <p style="margin:0px;font-size: 30px; font-weight: bold; color: #c2c2c2;">Salary</p><br>
+        <p style="font-size: 25px;margin: 0px; color: #ffffff;">{{ job[0]['salary'] }} {{ job[0]['currency'] }}</p><br>
+        <hr style="width:60%;height:4px;border-radius:20px;"><br>
+
+        
+        <p style="margin:0px;font-size: 30px; font-weight: bold; color: #c2c2c2;">Requirements</p><br>
+        <p style="font-size: 25px;margin: 20px; color: #ffffff;">{{ job[0]['requirements'] }}</p><br>
+        <hr style="width:90%;height:4px;border-radius:20px;"><br>
+
+        
+        <p style="margin:0px;font-size: 30px; font-weight: bold; color: #c2c2c2;">Responsibilities</p><br>
+        <p style="font-size: 25px;margin: 20px; color: #ffffff;">{{ job[0]['responsibilities'] }}</p>
+
+    
+    {% else %}
+        Page Not Found! 404
+    {% endif %}
+{% endblock %} 
+
