@@ -1,8 +1,8 @@
 import pymysql
-# from dotenv import load_dotenv  ###shut down all dotenv in push
+from dotenv import load_dotenv  ###shut down all dotenv in push
 import os
 
-# load_dotenv()  ###shut down all dotenv in push
+load_dotenv()  ###shut down all dotenv in push
 def load_data():
     timeout = 10
     connection = pymysql.connect(

@@ -25,7 +25,12 @@
 
         
         <p style="margin:0px;font-size: 30px; font-weight: bold; color: #c2c2c2;">Requirements</p><br>
-        <p style="font-size: 25px;margin: 20px; color: #ffffff;">{{ job[0]['requirements'] }}</p><br>
+        <ul>
+        {% for i in job[0]['requirements'].split('\n') %}
+            <li><p style="margin:10px;font-size: 25px; color: #ffffff;">{{ i }}</p></li>
+            <br>
+        {% endfor %}
+        </ul>
         <hr style="width:90%;height:4px;border-radius:20px;"><br>
 
         
