@@ -1,0 +1,25 @@
+<form action='/job/{{ job[0]['id'] }}/apply' method='POST' style="display: flex; flex-direction: column; gap: 20px; background-color: #1e1e1e; padding: 30px; border-radius: 10px; width: 50%; margin: auto; align-items: center;">
+    <label style="font-size: 30px; font-weight: bold; color: #c2c2c2;">Application Form</label>
+
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+        <label style="font-size: 20px; font-weight: bold; color: #c2c2c2;" for="username">Full Name</label>
+        <input name="full_name" required maxlength="60" minlength="3" id="username" type="text" style="color:white; background-color:#3b3b3b; border: 2px solid #3b3b3b; border-radius:5px; font-size:25px; font-family:'Bangers', cursive;">
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+        <label style="font-size: 20px; font-weight: bold; color: #c2c2c2;" for="email">Email</label>
+        <input name="email" maxlength="90" id="email" type="email" required style="color:white; background-color:#3b3b3b; border: 2px solid #3b3b3b; border-radius:5px; font-size:25px; font-family:'Bangers', cursive;">
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+        <label for="info" style="font-size: 20px; font-weight: bold; color: #c2c2c2;">Work Experience</label>
+        <textarea name="work_experience" rows="3" cols="25" style="color:white; background-color:#3b3b3b; border: 2px solid #3b3b3b; border-radius:5px; font-size:25px; font-family:'Bangers', cursive;" id="info"></textarea>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+        <label style="font-size: 20px; font-weight: bold; color: #c2c2c2;" for="resume">Resume Link</label>
+        <input name="resume_link" required maxlength="60" minlength="3" id="resume" type="text" style="color:white; background-color:#3b3b3b; border: 2px solid #3b3b3b; border-radius:5px; font-size:25px; font-family:'Bangers', cursive;">
+    </div>
+
+    <input type="submit" value="Submit" style="color:white; background-color:#3b3b3b; border: 2px solid #3b3b3b; border-radius:5px; font-size:25px; font-family:'Bangers', cursive;">
+</form>
