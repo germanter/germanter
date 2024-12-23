@@ -20,8 +20,13 @@ def job(id):
 def apply(id):
     data = request.form
     job = load_job(id)
-    insert_application(id,data)
-    return render_template('applied.html',job=job,data=data)
+    check_duplicate = insert_application(id,data)
+    return render_template(
+                          'applied.html',
+                           job=job,
+                           data=data,
+                           check=check_duplicate
+                           )
     
 
 if __name__=="__main__":

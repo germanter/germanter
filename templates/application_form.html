@@ -1,4 +1,4 @@
-<form action='/job/{{ job[0]['id'] }}/apply' method='POST' style="display: flex; flex-direction: column; gap: 20px; background-color: #1e1e1e; padding: 30px; border-radius: 10px; width: 50%; margin: auto; align-items: center;">
+<form action='/job/{{ job[0]['id'] }}/apply' method='POST' style="display: flex; flex-direction: column; gap: 20px; background-color: #1e1e1e; padding: 30px; border-radius: 10px; width: 50%; margin: auto; align-items: center;" onsubmit="disableButton(this)">
     <label style="font-size: 30px; font-weight: bold; color: #c2c2c2;">Application Form</label>
 
     <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
@@ -21,5 +21,13 @@
         <input name="resume_link" required maxlength="60" minlength="3" id="resume" type="text" style="color:white; background-color:#3b3b3b; border: 2px solid #3b3b3b; border-radius:5px; font-size:25px; font-family:'Bangers', cursive;">
     </div>
 
-    <input type="submit" value="Submit" style="color:white; background-color:#3b3b3b; border: 2px solid #3b3b3b; border-radius:5px; font-size:25px; font-family:'Bangers', cursive;">
+    <input type="submit" value="Submit" id="submitButton" style="color:white; background-color:#3b3b3b; border: 2px solid #3b3b3b; border-radius:5px; font-size:25px; font-family:'Bangers', cursive;">
 </form>
+
+<script>
+    function disableButton(form) {
+        const submitButton = form.querySelector('#submitButton');
+        submitButton.disabled = true;
+        submitButton.value = 'Processing...';
+    }
+</script>
