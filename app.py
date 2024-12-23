@@ -1,6 +1,8 @@
 from flask import Flask,render_template,jsonify,request
 from database import load_data,load_job,insert_application
+
 app = Flask(__name__)
+
 
 @app.route("/")
 def home():
